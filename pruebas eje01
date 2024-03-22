@@ -1,0 +1,77 @@
+Querys:
+
+1. Recuperar autores
+
+query {
+  allAuthors {
+    id
+    name
+    nationality
+  }
+}
+
+2. Recuperar los libros
+
+query {
+  allBooks {
+    id
+    title
+    author {
+      id
+      name
+    }
+  }
+}
+
+3. Recuperar libro por el Id
+
+query {
+  bookById(id: "1") {
+    id
+    title
+    author {
+      id
+      name
+    }
+    ISBN
+    publication
+  }
+}
+
+4. Recuperar todos los prestamos
+
+query {
+  allLoans {
+    id
+    book {
+      id
+      title
+    }
+    user
+    loanDate
+    returnDate
+  }
+}
+
+Mutationes: 
+
+1. Crear nuevo autor
+
+mutation {
+  createAuthor(name: "Gabriel García Márquez", nationality: "Colombian") {
+    id
+    name
+    nationality
+  }
+}
+
+
+2. Editar nuevo autor
+
+mutation {
+  createAuthor(name: "Gabriel García Márquez", nationality: "Colombian") {
+    id
+    name
+    nationality
+  }
+}
